@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication.Models;
+using WebApplication.Services.Bussines;
 
 namespace WebApplication.Controllers
 {
@@ -16,7 +17,17 @@ namespace WebApplication.Controllers
         }
         public string Entrance(UserModel userModel)
         {
-            return "Название группы: "+ userModel.GroupName;
+            //return "Название группы: "+ userModel.GroupName;
+            SecurityService securityService = new SecurityService();
+            Boolean success = securityService.Authenticate(userModel);
+            if (success)
+            {
+                return "Успешный вход";
+            }
+            else
+            {
+                return "Не удалось войти";
+            }
         }
     }
 }

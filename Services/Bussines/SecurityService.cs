@@ -15,6 +15,10 @@ namespace WebApplication.Services.Bussines
         {
             return daoService.FindByUser(user);
         }
+        public string AuthenticateGROUP(UserModel user)
+        {
+            return daoService.FindByUserGROUP(user);
+        }
     }
 
 }

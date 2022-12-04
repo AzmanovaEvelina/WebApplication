@@ -20,9 +20,10 @@ namespace WebApplication.Controllers
             //return "Название группы: "+ userModel.GroupName;
             SecurityService securityService = new SecurityService();
             Boolean success = securityService.Authenticate(userModel);
+            String groupENG = securityService.AuthenticateGROUP(userModel);
             if (success)
             {
-                return "Успешный вход";
+                return "Успешный вход" + groupENG;
             }
             else
             {

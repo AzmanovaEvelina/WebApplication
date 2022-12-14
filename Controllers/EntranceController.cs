@@ -20,6 +20,8 @@ namespace WebApplication.Controllers
         public static void DownloadLink(string currentLink)
         {
             string fileDownload = @"C:\Users\HONOR\Desktop\DownLoadFiles\ex.xlsx";
+            // Для АРТУРА 
+            //string fileDownload = @"C:\Users\User\Desktop\DownLoadFiles\ex.xlsx";
             using (var client = new WebClient())
             {
                 client.DownloadFile(new Uri(currentLink), fileDownload);
@@ -68,7 +70,8 @@ namespace WebApplication.Controllers
             CreateDownloadLink(groupENG);
             if (success)
             {
-                return "Успешный вход" + groupENG;
+                return "Успешный вход! Группа:" + groupENG + " Введенное пользователем значение:" + userModel.GroupName;
+                
             }
             else
             {

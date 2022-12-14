@@ -9,7 +9,9 @@ namespace WebApplication.Services.Data
 {
     public class SecurityDAO
     {
-        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GroupName;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";  //connect to database
+        //string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=RusToEngGroupName;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";  //connect to database Artur
+
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GroupName;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         internal bool FindByUser(UserModel user)
         {
             bool success = false;
@@ -43,8 +45,10 @@ namespace WebApplication.Services.Data
         }
         internal string FindByUserGROUP(UserModel user)
         {
-            string groupENG ="";
+            //return user.GroupName;
+            string groupENG =" ";
             string querystring = "SELECT * FROM dbo.Groups WHERE groupNameRU =@GroupName ";
+            //return querystring;
 
             using (SqlConnection connection
                  = new SqlConnection(connectionString))
@@ -74,6 +78,7 @@ namespace WebApplication.Services.Data
                     Console.WriteLine(e.Message);
                 }
                 return groupENG;
+                //return user;
             }
         }
     }

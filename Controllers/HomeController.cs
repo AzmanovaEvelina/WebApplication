@@ -10,8 +10,12 @@ namespace WebApplication.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("Entrance");
         }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public ActionResult About()
         {

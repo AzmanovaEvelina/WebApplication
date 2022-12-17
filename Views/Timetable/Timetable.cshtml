@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "TimetableView";
+}
+
+<h2>Ваше расписание на эту неделю</h2>
+
+<div>
+    <table>
+        @foreach (var day in ViewBag.Week)
+        {
+            <tr>
+                <td></td> <td>@day.name</td>
+            </tr>
+            
+            foreach(var lesson in day.lessons)
+            {
+                <tr>
+                    <td>@lesson.time</td>
+                    <td>@lesson.name</td>
+                </tr>
+            }
+            <br>
+        }
+    </table>
+</div>

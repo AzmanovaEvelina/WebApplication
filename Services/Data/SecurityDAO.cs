@@ -10,9 +10,9 @@ namespace WebApplication.Services.Data
     public class SecurityDAO
     {
         // Артур 
-        //string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=RusToEngGroupName;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=RusToEngGroupName;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         // Эвелина
-          string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GroupName;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";  //connect to database
+          //string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GroupName;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";  //connect to database
         internal bool FindByUser(UserModel user)
         {
             bool success = false;
@@ -64,9 +64,9 @@ namespace WebApplication.Services.Data
                         while (reader.Read())
                         {
                             //Артур
-                           // groupENG = reader.GetString(1);
+                            groupENG = reader.GetString(1);
                             //Эвелина
-                            groupENG = reader.GetString(2);
+                            //groupENG = reader.GetString(2);
                         }
                     }
                     else

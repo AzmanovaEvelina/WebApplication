@@ -10,7 +10,7 @@ namespace WebApplication.Controllers
 {
     public class TimetableController : Controller
     {
-        // GET: Timetable
+        // GET: TimetableSSS
         public ActionResult Timetable()
         {
             // Вызов /Timetable/Timetable
@@ -19,9 +19,9 @@ namespace WebApplication.Controllers
 
             // Путь до Excel файла, где скачено расписание
             // Эвелина:
-            string excelWithTimetable = @"C:\Users\HONOR\Desktop\DownLoadFiles\ex.xlsx";
-            // Артур
-            //string excelWithTimetable = @"C:\Users\User\Desktop\DownLoadFiles\ex.xlsx";
+            // string excelWithTimetable = @"C:\Users\HONOR\Desktop\DownLoadFiles\ex.xlsx";
+             //Артур
+            string excelWithTimetable = @"C:\Users\User\Desktop\DownLoadFiles\ex.xlsx";
 
             ViewBag.Week = ExcelToTimetable.ConvertExcelToTimetable(excelWithTimetable);
             return View();

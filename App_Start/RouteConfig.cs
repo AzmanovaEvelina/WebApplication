@@ -24,10 +24,17 @@ namespace WebApplication
                 url: "{Entrance}",
                 defaults: new { controller = "Entrance", action = "Index", id = UrlParameter.Optional }
             );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Timetable",
+                url: "{Timetable}",
+                defaults: new { controller = "Timetable", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

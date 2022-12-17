@@ -12,15 +12,16 @@ namespace WebApplication.Controllers
 {
     public class EntranceController : Controller
     {
-        // GET: Entrance парпарп
+        // GET: Entrance 
         public ActionResult Index()
         {
             return View("Entrance");
         }
+
         public static void DownloadLink(string currentLink)
         {
-            //string fileDownload = @"C:\Users\User\Desktop\DownLoadFiles\ex.xlsx";
-            string fileDownload = @"C:\Users\HONOR\Desktop\DownLoadFiles\ex.xlsx";
+            string fileDownload = @"C:\Users\User\Desktop\DownLoadFiles\ex.xlsx";
+           // string fileDownload = @"C:\Users\HONOR\Desktop\DownLoadFiles\ex.xlsx";
             using (var client = new WebClient())
             {
                 client.DownloadFile(new Uri(currentLink), fileDownload);
@@ -69,11 +70,11 @@ namespace WebApplication.Controllers
             CreateDownloadLink(groupENG);
             if (success)
             {
-                return "Успешный вход" + groupENG;
+                return "Поздравляем! Расписание для группы " + userModel.GroupName + " было успешно загружено. \tВернитесь назад, чтобы перейти к выводу расписания.";
             }
             else
             {
-                return "Не удалось войти";
+                return "Некорректное название группы. Группы " + userModel.GroupName + " не существует. Вернитесь назад, чтобы проверить корректность группы.";
             }
         }
     }

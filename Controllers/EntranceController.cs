@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication.Models;
 using WebApplication.Services.Bussines;
-
+ 
 namespace WebApplication.Controllers
 {
     public class EntranceController : Controller

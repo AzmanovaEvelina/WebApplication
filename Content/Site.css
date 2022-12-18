@@ -15,17 +15,23 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+
 .styletable {
     font-family: Verdana, Arial, Helvetica, Sans-Serif;
     font-size: 14px;
     border-radius: 10px;
     border-spacing: 0;
     text-align: center;
+    color: darkred;
+}
+
+.td {
+    background: darkred;
 }
 
 
 
-.th, td {
+. /*th, td {
     border-style: solid;
     border-width: 0 1px 1px 0;
     border-color: white;
@@ -48,8 +54,7 @@ tr:last-child td:last-child {
 
 tr td:last-child {
     border-right: none;
-}
-
+}*/
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

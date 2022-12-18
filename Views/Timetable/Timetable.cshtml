@@ -1,29 +1,29 @@
 ﻿
-@{
-    ViewBag.Title = "TimetableView";
-}
+@{ ViewBag.Title = "TimetableView"; }
+
 <head>
-    <link type="text/css" rel="styletable" href="C:\Users\HONOR\Desktop\WebApplication-artur_01\WebApplication-artur_01\Content\Site.css" />
+    <meta name="viewport" content="width=device-width" />
+    @*<link type="text/css" rel="stylesheet" href="../../Content/Site.css" />*@
+    <link rel="stylesheet" href="C:\Users\HONOR\Desktop\WebApplication-artur_01\WebApplication-artur_01\Content\Site.css" />
 </head>
 
-<h2>Ваше расписание на эту неделю</h2>
-
+<h2>Расписание на неделю</h2>
 <div>
-    <table>
+    <table class="styletable">
         @foreach (var day in ViewBag.Week)
         {
-            <tr>
-                <td></td> <td>@day.name</td>
-            </tr>
-            
-            foreach(var lesson in day.lessons)
-            {
-                <tr>
-                    <td>@lesson.time</td>
-                    <td>@lesson.name</td>
-                </tr>
-            }
-            <br>
-        }
+<tr>
+    <td class="td"></td>
+    <td class="td">@day.name</td>
+</tr>
+ foreach (var lesson in day.lessons)
+{
+<tr>
+    <td class="td">@lesson.time</td>
+    <td>@lesson.name</td>
+</tr>
+ }
+<br>
+}
     </table>
 </div>

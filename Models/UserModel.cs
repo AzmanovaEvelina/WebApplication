@@ -7,6 +7,6 @@ namespace WebApplication.Models
 {
     public class UserModel
     {
-        public string GroupName { get; set; }
+        public string Группа { get; set; }
     }
 }

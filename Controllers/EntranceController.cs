@@ -11,7 +11,7 @@ using WebApplication.Services.Bussines;
 namespace WebApplication.Controllers
 {
     public class EntranceController : Controller
-    {
+    {  
         // GET: Entrance 
         public ActionResult Index()
         {

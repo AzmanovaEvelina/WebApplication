@@ -20,8 +20,8 @@ namespace WebApplication.Controllers
 
         public static void DownloadLink(string currentLink)
         {
-            //string fileDownload = @"C:\Users\User\Desktop\DownLoadFiles\ex.xlsx";
-            string fileDownload = @"C:\Users\HONOR\Desktop\DownLoadFiles\ex.xlsx";
+            string fileDownload = @"C:\Users\User\Desktop\DownLoadFiles\ex.xlsx";
+            //string fileDownload = @"C:\Users\HONOR\Desktop\DownLoadFiles\ex.xlsx";
             using (var client = new WebClient())
             {
                 client.DownloadFile(new Uri(currentLink), fileDownload);

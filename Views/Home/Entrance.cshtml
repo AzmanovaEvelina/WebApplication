@@ -1,10 +1,10 @@
 ﻿@model WebApplication.Models.UserModel
 
 @{
-    ViewBag.Title = "Entrance";
+    ViewBag.Title = "Расписание пар для судентов ПНИПУ";
 }
 
-<h2>Entrance</h2>
+<h2>Расписание пар для судентов ПНИПУ</h2>
 
 
 
@@ -13,27 +13,25 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
+        <h4><em>Введите ниже название группы, расписание которой вам необходимо получить</em></h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.GroupName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Группа, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.GroupName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.GroupName, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Группа, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Группа, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Загрузить расписание" class="btn btn-default" />
+                <input type="submit" value="Показать расписание" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

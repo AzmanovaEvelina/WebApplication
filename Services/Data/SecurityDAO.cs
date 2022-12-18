@@ -21,7 +21,7 @@ namespace WebApplication.Services.Data
                  = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(querystring, connection);
-                command.Parameters.Add("@GroupName", System.Data.SqlDbType.NVarChar, 50).Value = user.GroupName;
+                command.Parameters.Add("@GroupName", System.Data.SqlDbType.NVarChar, 50).Value = user.Группа;
                 try
                 {
                     connection.Open();
@@ -53,7 +53,7 @@ namespace WebApplication.Services.Data
                  = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(querystring, connection);
-                command.Parameters.Add("@GroupName", System.Data.SqlDbType.NVarChar, 50).Value = user.GroupName;
+                command.Parameters.Add("@GroupName", System.Data.SqlDbType.NVarChar, 50).Value = user.Группа;
                 try
                 {
                     connection.Open();

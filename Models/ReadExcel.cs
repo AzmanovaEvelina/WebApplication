@@ -83,7 +83,7 @@ namespace ReadExcel
                      * вторая, то ее назваание в строке со второй неделей
                      */
                     if (!isFirst) lessonIndex++;
-                    string name = sheet.Cell("c" + lessonIndex.ToString()).GetValue<string>();
+                    string name = "_____" + sheet.Cell("c" + lessonIndex.ToString()).GetValue<string>();
 
                     Week[i].lessons[j] = new Lesson(name, time);
                 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReadExcel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -62,7 +63,8 @@ namespace WebApplication.Controllers
 
             DownloadLink(downloadLink);
         }
-        public string Entrance(UserModel userModel)
+       
+            public string Entrance(UserModel userModel)
         {
             SecurityService securityService = new SecurityService();
             Boolean success = securityService.Authenticate(userModel);
@@ -76,6 +78,10 @@ namespace WebApplication.Controllers
             {
                 return "Некорректное название группы. Группы " + userModel.Группа + " не существует. Вернитесь назад, чтобы проверить корректность группы.";
             }
+            //return View("Timetable");
+            //Timetable();
+            /*TimetableController p = new TimetableController();
+            p.Timetable();*/
         }
     }
 }

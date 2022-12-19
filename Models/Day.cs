@@ -14,7 +14,7 @@ namespace ReadExcel
             Console.WriteLine(name);
             for (int i = 0; i < lessons.Length; i++)
             {
-                Console.WriteLine(lessons[i].time + "   " + lessons[i].name);
+                Console.WriteLine(lessons[i].time + "\t\t\t" + lessons[i].name);
             }
             Console.WriteLine('\n');
         }
